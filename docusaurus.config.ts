@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Welight 文档',
-  tagline: '轻量化的公众号文章排版美化应用',
+  tagline: '智能、轻量化的公众号文章编辑、排版体验',
   favicon: 'img/logo.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -107,11 +107,11 @@ const config: Config = {
           items: [
             {
               label: 'B站',
-              href: 'https://space.bilibili.com/welight',
+              href: 'https://space.bilibili.com/569257497',
             },
             {
               label: 'QQ群',
-              href: '#',
+              href: 'https://qm.qq.com/q/k1vH5yPrkk',
             },
           ],
         },
@@ -123,8 +123,8 @@ const config: Config = {
               href: 'https://waer.ltd',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/welight/welight',
+              label: '开发者博客',
+              href: 'https://ilikexff.cn',
             },
           ],
         },

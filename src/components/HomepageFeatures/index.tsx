@@ -1,52 +1,58 @@
 import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import LottieAnimation from '@site/src/components/LottieAnimation';
 import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  lottieSource: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: '简单易用',
+    lottieSource: '/lottie/2.lottie',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Welight 专为公众号文章排版而设计，界面简洁直观，
+        让您能够快速上手并创建美观的文章排版。
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: '专注内容',
+    lottieSource: '/lottie/3.lottie',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        专注于您的文章内容创作，Welight 提供丰富的排版样式和主题，
+        让您的文章在公众号中脱颖而出。
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: '功能丰富',
+    lottieSource: '/lottie/Development.lottie',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        支持多种排版主题、AI 服务集成、云端存储同步等功能，
+        为您的内容创作提供全方位的支持。
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, lottieSource, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <LottieAnimation 
+          src={lottieSource} 
+          className={styles.featureSvg} 
+          width={200} 
+          height={200} 
+        />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
